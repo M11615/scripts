@@ -13,6 +13,7 @@ $RepositoryPathList = @(
     "D:\Private\Projects\dotnet\sdk",
     "D:\Private\Projects\git\git",
     "D:\Private\Projects\ip7z\7zip",
+    "D:\Private\Projects\Klocman\Bulk-Crap-Uninstaller",
     "D:\Private\Projects\MBackspace\nextjs",
     "D:\Private\Projects\microsoft\PowerToys",
     "D:\Private\Projects\microsoft\vscode",
