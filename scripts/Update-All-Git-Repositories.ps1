@@ -23,6 +23,7 @@ $RepositoryPathList = @(
     "D:\Private\Projects\openjdk\jdk",
     "D:\Private\Projects\pbatard\rufus",
     "D:\Private\Projects\pnpm\pnpm",
+    "D:\Private\Projects\PrismLauncher\PrismLauncher"
     "D:\Private\Projects\python\cpython",
     "D:\Private\Projects\rclone\rclone",
     "D:\Private\Projects\v2rayA\v2rayA",
