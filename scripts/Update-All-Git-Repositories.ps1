@@ -68,6 +68,13 @@ foreach ($RepositoryPath in $RepositoryPathList) {
                     Add-Content -Path $LogFilePath -Value ("Completed update for: $RepositoryPath")
                     $SuccessfulUpdates++
                     $UpdateSuccess = $true
+
+                    # === Update parent folder timestamp ===
+                    $ParentDir = Split-Path $RepositoryPath -Parent
+                    if (Test-Path $ParentDir) {
+                        (Get-Item $ParentDir).LastWriteTime = Get-Date
+                        Add-Content -Path $LogFilePath -Value ("Updated parent directory timestamp: $ParentDir")
+                    }
                 } else {
                     Add-Content -Path $LogFilePath -Value ("Error during git pull for $RepositoryPath : $Output")
                     Add-Content -Path $LogFilePath -Value ("Retrying...")
