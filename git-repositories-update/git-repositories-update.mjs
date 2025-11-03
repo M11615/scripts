@@ -10,7 +10,7 @@ const execAsync = promisify(exec);
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 const repositoryListFile = join(__dirname, "repositories.txt");
-const logFilePath = join(__dirname, "update-all-git-repositories.log");
+const logFilePath = join(__dirname, "git-repositories-update.log");
 
 function log(message) {
   const timestamp = new Date().toISOString().replace("T", " ").split(".")[0];
