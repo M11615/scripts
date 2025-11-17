@@ -62,16 +62,6 @@ async function main() {
           appendLogMessage(`Completed update for: ${repositoryPath}`);
           successfulRepositoryCount++;
           isUpdateSuccessful = true;
-          const currentTime = new Date();
-          if (fs.existsSync(repositoryPath)) {
-            fs.utimesSync(repositoryPath, currentTime, currentTime);
-            appendLogMessage(`Updated repository directory timestamp: ${repositoryPath}`);
-          }
-          const parentDirectoryPath = dirname(repositoryPath);
-          if (fs.existsSync(parentDirectoryPath)) {
-            fs.utimesSync(parentDirectoryPath, currentTime, currentTime);
-            appendLogMessage(`Updated parent directory timestamp: ${parentDirectoryPath}`);
-          }
         } catch (error) {
           retryCount++;
           retryCountsByRepository.set(repositoryPath, retryCount);
