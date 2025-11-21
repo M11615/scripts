@@ -53,13 +53,17 @@ async function main() {
       let retryCount = 0;
       while (!isUpdateSuccessful) {
         try {
+          const { stdout: remoteUrl } = await executeCommandAsync(
+            "git remote get-url origin",
+            { cwd: repositoryPath }
+          );
           appendLogMessage("Executing: git pull");
           const { stdout, stderr } = await executeCommandAsync("git pull", { cwd: repositoryPath });
           if (stderr && !stdout.trim()) {
             throw new Error(stderr);
           }
           appendLogMessage(stdout.trim());
-          appendLogMessage(`Completed update for: ${repositoryPath}`);
+          appendLogMessage(`Update completed - Remote: ${remoteUrl.trim()}, Local: ${repositoryPath}`);
           successfulRepositoryCount++;
           isUpdateSuccessful = true;
         } catch (error) {

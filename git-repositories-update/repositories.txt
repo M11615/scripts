@@ -9,6 +9,7 @@ D:\Private\Projects\Klocman\Bulk-Crap-Uninstaller
 D:\Private\Projects\MBackspace\nextjs
 D:\Private\Projects\microsoft\PowerToys
 D:\Private\Projects\microsoft\vscode
+D:\Private\Projects\mingw-w64\mingw-w64
 D:\Private\Projects\moby\moby
 D:\Private\Projects\nodejs\node
 D:\Private\Projects\npm\cli
