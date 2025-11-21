@@ -7,7 +7,8 @@ D:\Private\Projects\gcc
 D:\Private\Projects\git\git
 D:\Private\Projects\ip7z\7zip
 D:\Private\Projects\Klocman\Bulk-Crap-Uninstaller
-D:\Private\Projects\MBackspace\nextjs
+D:\Private\Projects\M11615\nextjs
+D:\Private\Projects\M11615\scripts
 D:\Private\Projects\microsoft\PowerToys
 D:\Private\Projects\microsoft\vscode
 D:\Private\Projects\moby\moby
