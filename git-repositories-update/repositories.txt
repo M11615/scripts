@@ -24,8 +24,6 @@ D:\Private\Projects\pbatard\rufus
 D:\Private\Projects\pnpm\pnpm
 D:\Private\Projects\python\cpython
 D:\Private\Projects\rclone\rclone
-D:\Private\Projects\syncthing\syncthing
-D:\Private\Projects\syncthing\syncthing-android
 D:\Private\Projects\v2fly\v2ray-core
 D:\Private\Projects\v2rayA\v2rayA
 D:\Private\Projects\v8\v8
