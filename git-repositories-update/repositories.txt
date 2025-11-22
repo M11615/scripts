@@ -27,4 +27,3 @@ D:\Private\Projects\syncthing\syncthing-android
 D:\Private\Projects\v2fly\v2ray-core
 D:\Private\Projects\v2rayA\v2rayA
 D:\Private\Projects\yarnpkg\berry
-D:\Private\Projects\yarnpkg\yarn
