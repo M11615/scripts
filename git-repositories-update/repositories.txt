@@ -5,7 +5,6 @@ D:\Private\Projects\docker\compose
 D:\Private\Projects\dotnet\sdk
 D:\Private\Projects\gcc
 D:\Private\Projects\git\git
-D:\Private\Projects\gitlab-org\gitlab
 D:\Private\Projects\ip7z\7zip
 D:\Private\Projects\Klocman\Bulk-Crap-Uninstaller
 D:\Private\Projects\M11615\nextjs
