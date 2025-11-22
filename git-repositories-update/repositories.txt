@@ -8,8 +8,8 @@ D:\Private\Projects\git\git
 D:\Private\Projects\gitlab-org\gitlab
 D:\Private\Projects\ip7z\7zip
 D:\Private\Projects\Klocman\Bulk-Crap-Uninstaller
-D:\Private\Projects\m11615\nextjs
-D:\Private\Projects\m11615\scripts
+D:\Private\Projects\M11615\nextjs
+D:\Private\Projects\M11615\scripts
 D:\Private\Projects\microsoft\PowerToys
 D:\Private\Projects\microsoft\TypeScript
 D:\Private\Projects\microsoft\vscode
@@ -26,4 +26,5 @@ D:\Private\Projects\syncthing\syncthing
 D:\Private\Projects\syncthing\syncthing-android
 D:\Private\Projects\v2fly\v2ray-core
 D:\Private\Projects\v2rayA\v2rayA
+D:\Private\Projects\v8\v8
 D:\Private\Projects\yarnpkg\berry
