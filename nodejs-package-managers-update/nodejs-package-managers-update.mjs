@@ -22,9 +22,7 @@ function delay(milliseconds) {
 
 async function getVersion(command) {
   try {
-    const { stdout } = await executeCommandAsync(command);
-
-    return stdout.trim();
+    return (await executeCommandAsync(command)).stdout.trim();
   } catch {
     return "Unknown";
   }
