@@ -6,7 +6,6 @@ D:\Private\Projects\dotnet\sdk
 D:\Private\Projects\expressjs\express
 D:\Private\Projects\facebook\react
 D:\Private\Projects\fastify\fastify
-D:\Private\Projects\gcc
 D:\Private\Projects\git\git
 D:\Private\Projects\ip7z\7zip
 D:\Private\Projects\Klocman\Bulk-Crap-Uninstaller
