@@ -3,6 +3,9 @@ D:\Private\Projects\aria2\aria2
 D:\Private\Projects\docker\cli
 D:\Private\Projects\docker\compose
 D:\Private\Projects\dotnet\sdk
+D:\Private\Projects\expressjs\express
+D:\Private\Projects\facebook\react
+D:\Private\Projects\fastify\fastify
 D:\Private\Projects\gcc
 D:\Private\Projects\git\git
 D:\Private\Projects\ip7z\7zip
@@ -16,6 +19,7 @@ D:\Private\Projects\moby\moby
 D:\Private\Projects\mongodb\mongo
 D:\Private\Projects\mongodb\mongo-tools
 D:\Private\Projects\mongodb-js\mongosh
+D:\Private\Projects\nestjs\nest
 D:\Private\Projects\nodejs\node
 D:\Private\Projects\npm\cli
 D:\Private\Projects\obsproject\obs-studio
@@ -26,4 +30,6 @@ D:\Private\Projects\python\cpython
 D:\Private\Projects\rclone\rclone
 D:\Private\Projects\v2fly\v2ray-core
 D:\Private\Projects\v2rayA\v2rayA
+D:\Private\Projects\vercel\next.js
+D:\Private\Projects\vercel\turborepo
 D:\Private\Projects\yarnpkg\berry
