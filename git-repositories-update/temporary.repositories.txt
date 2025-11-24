@@ -1,0 +1,2 @@
+/volume1/path1
+/volume2/path2
