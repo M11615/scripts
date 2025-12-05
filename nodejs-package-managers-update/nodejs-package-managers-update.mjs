@@ -11,16 +11,16 @@ const currentFilePath = fileURLToPath(import.meta.url);
 const currentDirectoryPath = dirname(currentFilePath);
 const logFileAbsolutePath = join(currentDirectoryPath, "./nodejs-package-managers-update.log");
 
-function appendLogMessage(message) {
+const appendLogMessage = (message) => {
   const timestamp = new Date().toISOString().replace("T", " ").split(".")[0];
   fs.appendFileSync(logFileAbsolutePath, `[${timestamp}] ${message}\n`);
 }
 
-function delay(milliseconds) {
+const delay = (milliseconds) => {
   return new Promise(resolve => setTimeout(resolve, milliseconds));
 }
 
-async function getVersion(command) {
+const getVersion = async (command) => {
   try {
     return (await executeCommandAsync(command)).stdout.trim();
   } catch {
@@ -28,7 +28,7 @@ async function getVersion(command) {
   }
 }
 
-async function updateWithRetry(label, getVersionCmd, updateCmd, maxRetries = 3) {
+const updateWithRetry = async (label, getVersionCmd, updateCmd, maxRetries = 3) => {
   appendLogMessage("-------------------------------------------------------------");
   appendLogMessage(`Processing: ${label}`);
   appendLogMessage("-------------------------------------------------------------");
@@ -58,7 +58,7 @@ async function updateWithRetry(label, getVersionCmd, updateCmd, maxRetries = 3) 
   return { success: false, beforeVersion: beforeVersion, afterVersion: beforeVersion };
 }
 
-async function main() {
+const main = async () => {
   appendLogMessage("=====================================================================");
   appendLogMessage(`Package Managers Update Started at ${new Date().toLocaleString()}`);
   appendLogMessage("=====================================================================");

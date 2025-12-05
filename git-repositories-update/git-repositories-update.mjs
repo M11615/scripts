@@ -12,16 +12,16 @@ const currentDirectoryPath = dirname(currentFilePath);
 const repositoryListFilePath = join(currentDirectoryPath, "./repositories.txt");
 const logFileAbsolutePath = join(currentDirectoryPath, "./git-repositories-update.log");
 
-function appendLogMessage(message) {
+const appendLogMessage = (message) => {
   const timestamp = new Date().toISOString().replace("T", " ").split(".")[0];
   fs.appendFileSync(logFileAbsolutePath, `[${timestamp}] ${message}\n`);
 }
 
-function delay(milliseconds) {
+const delay = (milliseconds) => {
   return new Promise(resolve => setTimeout(resolve, milliseconds));
 }
 
-async function main() {
+const main = async () => {
   if (!fs.existsSync(repositoryListFilePath)) {
     console.error(`Repository list file not found: ${repositoryListFilePath}`);
     console.error("Please create it with one repository path per line.");
