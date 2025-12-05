@@ -17,9 +17,7 @@ const appendLogMessage = (message) => {
   fs.appendFileSync(logFileAbsolutePath, `[${timestamp}] ${message}\n`);
 }
 
-const delay = (milliseconds) => {
-  return new Promise(resolve => setTimeout(resolve, milliseconds));
-}
+const delay = (milliseconds) => new Promise(resolve => setTimeout(resolve, milliseconds));
 
 const main = async () => {
   if (!fs.existsSync(repositoryListFilePath)) {
@@ -59,9 +57,7 @@ const main = async () => {
           );
           appendLogMessage("Executing: git pull");
           const { stdout, stderr } = await executeCommandAsync("git pull", { cwd: repositoryPath });
-          if (stderr && !stdout.trim()) {
-            throw new Error(stderr);
-          }
+          if (stderr && !stdout.trim()) throw new Error(stderr);
           appendLogMessage(stdout.trim());
           appendLogMessage(`Update completed - Remote: ${remoteUrl.trim()}, Local: ${repositoryPath}`);
           successfulRepositoryCount++;

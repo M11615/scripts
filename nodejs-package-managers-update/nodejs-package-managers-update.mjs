@@ -16,9 +16,7 @@ const appendLogMessage = (message) => {
   fs.appendFileSync(logFileAbsolutePath, `[${timestamp}] ${message}\n`);
 }
 
-const delay = (milliseconds) => {
-  return new Promise(resolve => setTimeout(resolve, milliseconds));
-}
+const delay = (milliseconds) => new Promise(resolve => setTimeout(resolve, milliseconds));
 
 const getVersion = async (command) => {
   try {
@@ -43,10 +41,11 @@ const updateWithRetry = async (label, getVersionCmd, updateCmd, maxRetries = 3) 
       appendLogMessage(stdout.trim());
       const afterVersion = await getVersion(getVersionCmd);
       appendLogMessage(`Update successful. After version: ${afterVersion}`);
+
       return { success: true, beforeVersion, afterVersion };
-    } catch (err) {
+    } catch (error) {
       attempts++;
-      appendLogMessage(`${label} update failed: ${err.message}`);
+      appendLogMessage(`${label} update failed: ${error.message}`);
       if (attempts < maxRetries) {
         appendLogMessage(`Retrying in 5 seconds... (Attempt ${attempts}/${maxRetries})`);
         await delay(5000);
