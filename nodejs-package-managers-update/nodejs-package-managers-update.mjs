@@ -9,7 +9,7 @@ import { exec } from "child_process";
 const executeCommandAsync = promisify(exec);
 const currentFilePath = fileURLToPath(import.meta.url);
 const currentDirectoryPath = dirname(currentFilePath);
-const logFileAbsolutePath = join(currentDirectoryPath, "nodejs-package-managers-update.log");
+const logFileAbsolutePath = join(currentDirectoryPath, "./nodejs-package-managers-update.log");
 
 function appendLogMessage(message) {
   const timestamp = new Date().toISOString().replace("T", " ").split(".")[0];

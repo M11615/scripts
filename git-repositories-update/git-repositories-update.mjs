@@ -9,8 +9,8 @@ import { exec } from "child_process";
 const executeCommandAsync = promisify(exec);
 const currentFilePath = fileURLToPath(import.meta.url);
 const currentDirectoryPath = dirname(currentFilePath);
-const repositoryListFilePath = join(currentDirectoryPath, "repositories.txt");
-const logFileAbsolutePath = join(currentDirectoryPath, "git-repositories-update.log");
+const repositoryListFilePath = join(currentDirectoryPath, "./repositories.txt");
+const logFileAbsolutePath = join(currentDirectoryPath, "./git-repositories-update.log");
 
 function appendLogMessage(message) {
   const timestamp = new Date().toISOString().replace("T", " ").split(".")[0];
