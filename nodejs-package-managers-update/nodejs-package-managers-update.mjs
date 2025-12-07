@@ -41,7 +41,6 @@ const updateWithRetry = async (label, getVersionCmd, updateCmd, maxRetries = 3) 
       appendLogMessage(stdout.trim());
       const afterVersion = await getVersion(getVersionCmd);
       appendLogMessage(`Update successful. After version: ${afterVersion}`);
-
       return { success: true, beforeVersion, afterVersion };
     } catch (error) {
       attempts++;
