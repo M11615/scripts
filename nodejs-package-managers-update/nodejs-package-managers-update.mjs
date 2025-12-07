@@ -53,7 +53,6 @@ const updateWithRetry = async (label, getVersionCmd, updateCmd, maxRetries = 3) 
     }
   }
   appendLogMessage(`${label} update failed after ${maxRetries} attempts.`);
-
   return { success: false, beforeVersion: beforeVersion, afterVersion: beforeVersion };
 }
 
