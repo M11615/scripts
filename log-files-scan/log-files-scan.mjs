@@ -51,14 +51,14 @@ const scanDirectory = (directoryPath, results) => {
     if (entry.isDirectory()) {
       if (isLogRelated(entry.name)) {
         const sizeKB = formatSizeKB(getDirectorySize(fullPath));
-        const cleanupFlag = parseFloat(sizeKB) >= CLEANUP_THRESHOLD_KB ? " [SUGGEST CLEANUP]" : "";
+        const cleanupFlag = parseFloat(sizeKB) >= CLEANUP_THRESHOLD_KB ? " [CLEANUP IF LOG]" : "";
         results.directories.push({ path: fullPath, sizeKB, cleanupFlag });
         appendLogMessage(`LOG-RELATED DIRECTORY: ${fullPath} (${sizeKB} KB)${cleanupFlag}`);
       }
       scanDirectory(fullPath, results);
     } else if (entry.isFile() && isLogRelated(entry.name) && isLogFile(entry.name)) {
       const sizeKB = formatSizeKB(fs.statSync(fullPath).size);
-      const cleanupFlag = parseFloat(sizeKB) >= CLEANUP_THRESHOLD_KB ? " [SUGGEST CLEANUP]" : "";
+      const cleanupFlag = parseFloat(sizeKB) >= CLEANUP_THRESHOLD_KB ? " [CLEANUP IF LOG]" : "";
       results.files.push({ path: fullPath, sizeKB, cleanupFlag });
       appendLogMessage(`LOG-RELATED FILE: ${fullPath} (${sizeKB} KB)${cleanupFlag}`);
     }
