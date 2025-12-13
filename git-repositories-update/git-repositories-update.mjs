@@ -21,8 +21,8 @@ const delay = (milliseconds) => new Promise(resolve => setTimeout(resolve, milli
 
 const main = async () => {
   if (!fs.existsSync(repositoryListFilePath)) {
+    appendLogMessage(`ERROR: Repository list file not found: ${repositoryListFilePath}`);
     console.error(`Repository list file not found: ${repositoryListFilePath}`);
-    console.error("Please create it with one repository path per line.");
     process.exit(1);
   }
   const repositoryPaths = fs
@@ -31,6 +31,7 @@ const main = async () => {
     .map(line => line.trim())
     .filter(line => line && !line.startsWith("#"));
   if (repositoryPaths.length === 0) {
+    appendLogMessage(`ERROR: No valid repository paths found in ${repositoryListFilePath}`);
     console.error(`No valid repository paths found in ${repositoryListFilePath}`);
     process.exit(1);
   }
