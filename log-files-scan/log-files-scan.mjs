@@ -103,9 +103,6 @@ const main = () => {
   appendLogMessage(`Log-Related Directories Found: ${results.directories.length}`);
   appendLogMessage(`Log-Related Files Found: ${results.files.length}`);
   appendLogMessage("=====================================================================");
-  console.log("Scan completed.");
-  console.log(`Log-related directories: ${results.directories.length}`);
-  console.log(`Log-related files: ${results.files.length}`);
   console.log(`Log saved to: ${logFileAbsolutePath}`);
 };
 
