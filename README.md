@@ -1,1 +1,1 @@
-# universal-scripts
+# scripts
