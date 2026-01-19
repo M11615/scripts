@@ -63,7 +63,7 @@ const main = async () => {
   results.npm = await updateWithRetry(
     "npm",
     "npm --version",
-    "npm install -g npm"
+    "npm install npm --global"
   );
   results.yarn = await updateWithRetry(
     "Yarn (Corepack)",
