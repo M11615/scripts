@@ -9,7 +9,7 @@ import { exec } from "child_process";
 const executeCommandAsync = promisify(exec);
 const currentFilePath = fileURLToPath(import.meta.url);
 const currentDirectoryPath = dirname(currentFilePath);
-const logFileAbsolutePath = join(currentDirectoryPath, "./nodejs-package-managers-update.log");
+const logFileAbsolutePath = join(currentDirectoryPath, "./python-package-managers-update.log");
 
 const appendLogMessage = (message) => {
   const timestamp = new Date().toISOString().replace("T", " ").split(".")[0];
@@ -60,20 +60,10 @@ const main = async () => {
   appendLogMessage(`Package Managers Update Started at ${new Date().toLocaleString()}`);
   appendLogMessage("=====================================================================");
   const results = {};
-  results.npm = await updateWithRetry(
-    "npm",
-    "npm --version",
-    "npm install -g npm"
-  );
-  results.yarn = await updateWithRetry(
-    "Yarn (Corepack)",
-    "yarn --version",
-    "corepack prepare yarn@stable --activate"
-  );
-  results.pnpm = await updateWithRetry(
-    "pnpm (Corepack)",
-    "pnpm --version",
-    "corepack prepare pnpm@latest --activate"
+  results.pip = await updateWithRetry(
+    "pip",
+    "pip --version",
+    "pip install --upgrade pip"
   );
   appendLogMessage("");
   appendLogMessage("=====================================================================");
